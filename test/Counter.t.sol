@@ -21,4 +21,9 @@ contract CounterTest is Test {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
+
+    function test_reset() public {
+        counter.reset();
+        assertEq(counter.number(), 0);
+    }
 }
